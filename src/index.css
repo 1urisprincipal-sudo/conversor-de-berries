@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-parchment text-white font-sans;
+    background-attachment: fixed;
+  }
+  h1, h2, h3 {
+    @apply font-pirata tracking-wider;
+  }
+}
+
+/* Efeito de borda rasgada (Wanted Poster) */
+.wanted-border {
+  position: relative;
+  background: #fdf6e3;
+  clip-path: polygon(
+    0% 5%, 5% 0%, 95% 0%, 100% 5%,
+    100% 95%, 95% 100%, 5% 100%, 0% 95%
+  );
+  box-shadow: 0 0 20px #00000080, inset 0 0 15px #b8860b;
+  border: 2px solid #b8860b;
+}
